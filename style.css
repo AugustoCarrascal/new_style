@@ -1,0 +1,82 @@
+  html { -webkit-font-smoothing: antialiased; }
+  body { background-color: #0B0B0C; }
+
+  /* ---- Firma de marca: el Poste de Barbero ----
+     El logo trae el clásico poste rojo/blanco/azul girando. En vez de
+     dibujar un poste literal, esas franjas se convierten en el hilo
+     conductor del sitio: un anillo giratorio detrás de los retratos
+     del equipo, y barras finas como separadores entre secciones. */
+  .pole-ring {
+    position: relative;
+    border-radius: 9999px;
+    background: repeating-conic-gradient(
+      from 0deg,
+      #C0303B 0deg 12deg,
+      #F5F1E8 12deg 24deg,
+      #2B4C8C 24deg 36deg,
+      #F5F1E8 36deg 48deg
+    );
+    animation: poleSpin 9s linear infinite;
+  }
+
+  .pole-bar {
+    height: 5px;
+    width: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      #C0303B 0px 10px,
+      #F5F1E8 10px 20px,
+      #2B4C8C 20px 30px,
+      #F5F1E8 30px 40px
+    );
+    opacity: 0.9;
+  }
+
+  .pole-chip {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: repeating-conic-gradient(
+      from 0deg,
+      #C0303B 0deg 90deg,
+      #F5F1E8 90deg 180deg,
+      #2B4C8C 180deg 270deg,
+      #F5F1E8 270deg 360deg
+    );
+    animation: poleSpin 3.5s linear infinite;
+  }
+
+  @keyframes poleSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Sticky header: transparent at the very top, solid once scrolled */
+  #siteHeader.scrolled {
+    background-color: rgba(11, 11, 12, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(214, 169, 74, 0.15);
+  }
+
+  ::selection { background: #D6A94A; color: #0B0B0C; }
+
+  :focus-visible { outline: 2px solid #D6A94A; outline-offset: 2px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* Lightbox: the enlarged photo grows into place */
+  #lightbox figure {
+    transform: scale(0.85);
+    opacity: 0;
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease;
+  }
+  #lightbox.flex figure {
+    transform: scale(1);
+    opacity: 1;
+  }

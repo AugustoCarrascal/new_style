@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>New Style Studio — Barbería Premium</title>
+<meta name="description" content="New Style Studio: barbería premium. Cortes precisos, estilo impecable. Reservá tu turno online." />
+
+<!-- Bebas Neue: display condensado, potente para titulares.
+     Kaushan Script: brush script, hace eco del logotipo escrito a mano.
+     Manrope: sans limpia y moderna para el cuerpo. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B0B0C',
+          charcoal: '#161618',
+          charcoal2: '#1E1E21',
+          line: '#2C2C30',
+          gold: '#D6A94A',
+          goldlight: '#F0CE7A',
+          ivory: '#F5F1E8',
+          steel: '#9C97A0',
+          polered: '#C0303B',
+          poleblue: '#2B4C8C',
+        },
+        fontFamily: {
+          display: ['Bebas Neue', 'sans-serif'],
+          script: ['Kaushan Script', 'cursive'],
+          body: ['Manrope', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+</head>
+
+<body class="bg-ink text-ivory font-body antialiased">
+
+<!-- ============ NAV (sticky) ============ -->
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5 shrink-0">
+      <img src="logo.png" alt="New Style Studio" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover">
+      <span class="hidden sm:block leading-tight">
+        <span class="block font-script text-xl text-ivory -mb-1">New Style</span>
+        <span class="block text-[9px] tracking-[0.4em] text-gold font-bold uppercase">Studio</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-xs font-bold tracking-[0.15em] uppercase text-steel">
+      <a href="#servicios" class="hover:text-gold transition-colors">Servicios</a>
+      <a href="#galeria" class="hover:text-gold transition-colors">Galería</a>
+      <a href="#equipo" class="hover:text-gold transition-colors">Equipo</a>
+      <a href="#opiniones" class="hover:text-gold transition-colors">Opiniones</a>
+      <a href="#contacto" class="hover:text-gold transition-colors">Ubicación</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="https://www.fresha.com/es/a/new-style-studio-florencio-varela-intendente-oliver-285-fkgm1cqb" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold text-ink font-extrabold text-xs sm:text-sm tracking-wide uppercase px-4 py-2.5 sm:px-6 sm:py-3 rounded-full hover:bg-goldlight transition-colors shadow-lg shadow-black/30">
+        Reservar tu turno
+      </a>
+      <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden text-ivory p-1.5">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileNav" class="hidden lg:hidden bg-ink/98 backdrop-blur border-t border-gold/15 px-5 py-6 flex flex-col gap-5 text-sm font-bold tracking-wide uppercase text-steel">
+    <a href="#servicios" class="hover:text-gold">Servicios</a>
+    <a href="#galeria" class="hover:text-gold">Galería</a>
+    <a href="#equipo" class="hover:text-gold">Equipo</a>
+    <a href="#opiniones" class="hover:text-gold">Opiniones</a>
+    <a href="#contacto" class="hover:text-gold">Ubicación</a>
+  </div>
+</header>
+
+<div class="pole-bar" aria-hidden="true"></div>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative min-h-[92vh] flex items-end pt-24 pb-16 md:pb-24 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?auto=format&fit=crop&w=1600&q=80" alt="Barbero de New Style Studio haciendo un degradado" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/10 to-transparent"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10 w-full">
+    <div class="max-w-2xl">
+      <div class="reveal flex items-center gap-3 mb-6">
+        <span class="pole-chip"></span>
+        <span class="text-[11px] sm:text-xs font-bold tracking-[0.25em] uppercase text-gold">Corte · Estilo · Actitud</span>
+      </div>
+
+      <h1 class="reveal font-display text-6xl sm:text-7xl md:text-8xl leading-[0.95] uppercase text-ivory">
+        Cortes precisos,
+        <span class="block font-script normal-case text-4xl sm:text-5xl md:text-6xl text-gold mt-2 lowercase">estilo impecable</span>
+      </h1>
+
+      <p class="reveal text-steel text-base sm:text-lg max-w-md mt-6 mb-9 font-medium leading-relaxed">
+        Atención personalizada, ambiente relajado y los mejores productos.
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row gap-3.5">
+        <a href="https://www.fresha.com/es/a/new-style-studio-florencio-varela-intendente-oliver-285-fkgm1cqb" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-gold text-ink font-extrabold text-sm tracking-wide uppercase px-8 py-4 rounded-full hover:bg-goldlight transition-colors shadow-lg shadow-black/40">
+          Reservar tu turno
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#galeria" class="inline-flex items-center justify-center gap-2 border border-ivory/25 text-ivory font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-full hover:border-gold hover:text-gold transition-colors">
+          Ver trabajos
+        </a>
+        <a href="https://wa.me/5491112345678" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-ink font-extrabold text-sm tracking-wide uppercase px-8 py-4 rounded-full hover:brightness-110 transition-all">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.44a9.85 9.85 0 0 0 4.84 1.28h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.93-7.01-2.93zm4.51 11.97c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.12-.56.12-.17.25-.65.8-.79.96-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.12.17 1.76 2.69 4.27 3.77.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-bar" aria-hidden="true"></div>
+
+<!-- ============ RESERVAR (sticky booking strip) ============ -->
+<section id="reservar" class="bg-charcoal border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 py-7 flex flex-col md:flex-row items-center justify-between gap-5">
+    <div class="flex items-center gap-4 text-center md:text-left">
+      <div class="w-11 h-11 rounded-full border border-gold/40 flex items-center justify-center shrink-0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D6A94A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      </div>
+      <div>
+        <p class="font-display text-xl tracking-wide text-ivory leading-tight">Reservá en menos de un minuto</p>
+        <p class="text-steel text-sm font-medium">Elegí día, hora y barbero — confirmación al instante.</p>
+      </div>
+    </div>
+    <a href="https://www.fresha.com/es/a/new-style-studio-florencio-varela-intendente-oliver-285-fkgm1cqb" target="_blank" rel="noopener" class="w-full md:w-auto text-center inline-flex items-center justify-center gap-2 bg-gold text-ink font-extrabold text-sm tracking-wide uppercase px-8 py-4 rounded-full hover:bg-goldlight transition-colors">
+      Reservar tu turno
+    </a>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios" class="py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+    <div class="reveal max-w-xl mb-12 md:mb-16">
+      <span class="text-xs font-bold tracking-[0.25em] text-gold uppercase">Lo que hacemos</span>
+      <h2 class="font-display text-4xl sm:text-5xl uppercase text-ivory mt-2">Servicios destacados</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal group bg-charcoal border border-line rounded-2xl p-7 hover:border-gold/50 transition-colors">
+        <div class="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D6A94A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8.5L19 19M8.5 15.5L19 5"/></svg>
+        </div>
+        <h3 class="font-display text-2xl tracking-wide uppercase text-ivory mb-2">Corte Clásico / Fade</h3>
+        <p class="text-steel text-sm font-medium leading-relaxed">Degradados nítidos y cortes clásicos, adaptados a tu estilo y a la forma de tu cara.</p>
+      </div>
+
+      <div class="reveal group bg-charcoal border border-line rounded-2xl p-7 hover:border-gold/50 transition-colors">
+        <div class="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D6A94A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 0-5 5v4a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"/><path d="M8 14v1a4 4 0 0 0 8 0v-1"/></svg>
+        </div>
+        <h3 class="font-display text-2xl tracking-wide uppercase text-ivory mb-2">Perfilado de Barba</h3>
+        <p class="text-steel text-sm font-medium leading-relaxed">Contorno preciso con navaja y tijera para una barba prolija de principio a fin.</p>
+      </div>
+
+      <div class="reveal group bg-charcoal border border-line rounded-2xl p-7 hover:border-gold/50 transition-colors">
+        <div class="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D6A94A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 3-4 5-4 8a4 4 0 0 0 8 0c0-3-1-5-4-8z"/><path d="M8 21h8"/></svg>
+        </div>
+        <h3 class="font-display text-2xl tracking-wide uppercase text-ivory mb-2">Afeitado Tradicional</h3>
+        <p class="text-steel text-sm font-medium leading-relaxed">Ritual con toalla caliente, espuma y navaja — afeitado a la antigua, sin apuro.</p>
+      </div>
+
+      <div class="reveal group bg-charcoal border border-line rounded-2xl p-7 hover:border-gold/50 transition-colors">
+        <div class="w-14 h-14 rounded-full border border-gold/40 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D6A94A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17l-5.5 3 1.5-6L3 9.5l6-.5L12 3l3 6 6 .5-5 4.5 1.5 6z"/></svg>
+        </div>
+        <h3 class="font-display text-2xl tracking-wide uppercase text-ivory mb-2">Corte para Niños</h3>
+        <p class="text-steel text-sm font-medium leading-relaxed">Cortes divertidos y con paciencia para los más chicos de la casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-bar" aria-hidden="true"></div>
+
+<!-- ============ GALERÍA ============ -->
+<section id="galeria" class="py-16 md:py-24 bg-charcoal border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+    <div class="reveal max-w-xl mb-12 md:mb-16">
+      <span class="text-xs font-bold tracking-[0.25em] text-gold uppercase">Galería</span>
+      <h2 class="font-display text-4xl sm:text-5xl uppercase text-ivory mt-2">Nuestro trabajo habla por nosotros</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" id="workGrid">
+      <button type="button" data-full="https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?auto=format&fit=crop&w=1400&q=80" data-caption="Fade en proceso" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in md:row-span-2 md:aspect-auto">
+        <img src="https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?auto=format&fit=crop&w=700&q=80" alt="Fade en proceso" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1514336937476-a5b961020a5c?auto=format&fit=crop&w=1400&q=80" data-caption="Detalle de corte" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in">
+        <img src="https://images.unsplash.com/photo-1514336937476-a5b961020a5c?auto=format&fit=crop&w=700&q=80" alt="Detalle de corte" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1582771498000-8ad44e6c84db?auto=format&fit=crop&w=1400&q=80" data-caption="Corte terminado" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in">
+        <img src="https://images.unsplash.com/photo-1582771498000-8ad44e6c84db?auto=format&fit=crop&w=700&q=80" alt="Corte terminado" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1702865272115-5afdbae975af?auto=format&fit=crop&w=1400&q=80" data-caption="Adentro del local" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in">
+        <img src="https://images.unsplash.com/photo-1702865272115-5afdbae975af?auto=format&fit=crop&w=700&q=80" alt="Interior de New Style Studio" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1654097800369-abc063d657c4?auto=format&fit=crop&w=1400&q=80" data-caption="Precisión al detalle" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in">
+        <img src="https://images.unsplash.com/photo-1654097800369-abc063d657c4?auto=format&fit=crop&w=700&q=80" alt="Precisión al detalle" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1703792684940-a05aa0f1188f?auto=format&fit=crop&w=1400&q=80" data-caption="Terminación prolija" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in md:row-span-2 md:aspect-auto">
+        <img src="https://images.unsplash.com/photo-1703792684940-a05aa0f1188f?auto=format&fit=crop&w=700&q=80" alt="Terminación prolija" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+      <button type="button" data-full="https://images.unsplash.com/photo-1571154182577-a63c5101f8d5?auto=format&fit=crop&w=1400&q=80" data-caption="Otro día, otro estilo" class="lightbox-trigger group relative aspect-square overflow-hidden rounded-xl border border-line block cursor-zoom-in col-span-2 md:col-span-1">
+        <img src="https://images.unsplash.com/photo-1571154182577-a63c5101f8d5?auto=format&fit=crop&w=700&q=80" alt="Otro día, otro estilo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPO ============ -->
+<section id="equipo" class="py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+    <div class="reveal max-w-xl mb-12 md:mb-16">
+      <span class="text-xs font-bold tracking-[0.25em] text-gold uppercase">El equipo</span>
+      <h2 class="font-display text-4xl sm:text-5xl uppercase text-ivory mt-2">Maestros Barberos</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-8 md:gap-12 max-w-3xl">
+      <div class="reveal text-center">
+        <div class="pole-ring w-36 h-36 md:w-44 md:h-44 mx-auto p-[6px]">
+          <div class="w-full h-full rounded-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=500&h=500&q=80" alt="Alex Merino, Maestro Barbero" loading="lazy" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <h3 class="font-script text-3xl text-gold mt-6">Alex Merino</h3>
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-steel mt-1">Maestro Barbero</p>
+        <p class="text-steel text-sm font-medium leading-relaxed mt-3">Especialista en fades y diseños. Más de 10 años dejando cada corte a la medida.</p>
+      </div>
+
+      <div class="reveal text-center">
+        <div class="pole-ring w-36 h-36 md:w-44 md:h-44 mx-auto p-[6px]">
+          <div class="w-full h-full rounded-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1546664278-c0a27e0cdc88?auto=format&fit=crop&w=500&h=500&q=80" alt="Daniel Rossi, Maestro Barbero" loading="lazy" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <h3 class="font-script text-3xl text-gold mt-6">Daniel Rossi</h3>
+        <p class="text-xs font-bold tracking-[0.2em] uppercase text-steel mt-1">Maestro Barbero</p>
+        <p class="text-steel text-sm font-medium leading-relaxed mt-3">El especialista en afeitado tradicional y perfilado de barba de la casa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pole-bar" aria-hidden="true"></div>
+
+<!-- ============ OPINIONES ============ -->
+<section id="opiniones" class="py-16 md:py-24 bg-charcoal border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10">
+    <div class="reveal max-w-xl mb-12 md:mb-16">
+      <span class="text-xs font-bold tracking-[0.25em] text-gold uppercase">Prueba social</span>
+      <h2 class="font-display text-4xl sm:text-5xl uppercase text-ivory mt-2">La confianza se nota en el resultado</h2>
+      <div class="flex items-center gap-3 mt-5">
+        <div class="flex text-gold text-lg" aria-hidden="true">★★★★★</div>
+        <span class="text-steel text-sm font-semibold">5.0 · +200 reseñas en Google</span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal bg-charcoal2 border border-line rounded-2xl p-7">
+        <div class="flex text-gold text-sm mb-4" aria-hidden="true">★★★★★</div>
+        <p class="text-ivory font-medium leading-relaxed mb-6">"Puntualidad excelente y la higiene impecable, ¡el corte quedó increíble!"</p>
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold font-bold text-xs">BG</span>
+          <span class="text-sm font-semibold text-steel">Bruno G.</span>
+        </div>
+      </div>
+      <div class="reveal bg-charcoal2 border border-line rounded-2xl p-7">
+        <div class="flex text-gold text-sm mb-4" aria-hidden="true">★★★★★</div>
+        <p class="text-ivory font-medium leading-relaxed mb-6">"Entré por el degradado y me quedé por la atención. Ahora vengo cada dos semanas."</p>
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold font-bold text-xs">TF</span>
+          <span class="text-sm font-semibold text-steel">Tomás F.</span>
+        </div>
+      </div>
+      <div class="reveal bg-charcoal2 border border-line rounded-2xl p-7">
+        <div class="flex text-gold text-sm mb-4" aria-hidden="true">★★★★★</div>
+        <p class="text-ivory font-medium leading-relaxed mb-6">"El afeitado con toalla caliente es otro nivel. Salgo sintiéndome nuevo."</p>
+        <div class="flex items-center gap-3">
+          <span class="w-9 h-9 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center text-gold font-bold text-xs">EM</span>
+          <span class="text-sm font-semibold text-steel">Ezequiel M.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="relative py-16 md:py-20 text-center overflow-hidden">
+  <div class="relative max-w-2xl mx-auto px-5">
+    <h2 class="font-display text-4xl md:text-6xl uppercase text-ivory mb-4">Tu turno te espera</h2>
+    <p class="text-steel font-medium mb-8">Reservá ahora y asegurate tu horario.</p>
+    <a href="https://www.fresha.com/es/a/new-style-studio-florencio-varela-intendente-oliver-285-fkgm1cqb" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold text-ink font-extrabold text-sm tracking-wide uppercase px-9 py-4 rounded-full hover:bg-goldlight transition-colors">
+      Reservar tu turno
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER / CONTACTO ============ -->
+<footer id="contacto" class="border-t border-gold/15 bg-charcoal">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 py-14 grid md:grid-cols-3 gap-10">
+
+    <div>
+      <a href="#top" class="flex items-center gap-2.5 mb-5">
+        <img src="logo.png" alt="New Style Studio" class="w-11 h-11 rounded-full object-cover">
+        <span class="leading-tight">
+          <span class="block font-script text-lg text-ivory -mb-1">New Style</span>
+          <span class="block text-[9px] tracking-[0.4em] text-gold font-bold uppercase">Studio</span>
+        </span>
+      </a>
+      <p class="text-steel text-sm font-medium leading-relaxed">
+        Intendente Oliver 285<br>
+        Florencio Varela, Buenos Aires
+      </p>
+      <div class="flex gap-3 mt-6">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full border border-line hover:border-gold flex items-center justify-center transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" class="w-10 h-10 rounded-full border border-line hover:border-gold flex items-center justify-center transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 1 1-2.59-2.59c.27 0 .53.04.78.12V9.4a5.31 5.31 0 0 0-.78-.06 5.35 5.35 0 1 0 5.35 5.35V9.13a7.24 7.24 0 0 0 4.24 1.36V7.4a4.28 4.28 0 0 1-2.85-1.58z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-display text-xl tracking-wide uppercase text-ivory mb-4">Horarios</h3>
+      <ul class="text-sm font-medium text-steel space-y-2">
+        <li class="flex justify-between gap-8"><span>Lun – Sáb</span><span class="text-ivory">10:00 – 20:00</span></li>
+        <li class="flex justify-between gap-8"><span>Domingo</span><span class="text-ivory">Cerrado</span></li>
+      </ul>
+      <a href="https://wa.me/5491112345678" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-ink font-extrabold text-xs tracking-wide uppercase px-6 py-3.5 rounded-full hover:brightness-110 transition-all">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.85.5 3.58 1.36 5.07L2 22l5.2-1.44a9.85 9.85 0 0 0 4.84 1.28h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.93-7.01-2.93zm4.51 11.97c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.12-.56.12-.17.25-.65.8-.79.96-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.12.17 1.76 2.69 4.27 3.77.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18z"/></svg>
+        ¿Dudas? Escribinos por WhatsApp
+      </a>
+    </div>
+
+    <div>
+      <h3 class="font-display text-xl tracking-wide uppercase text-ivory mb-4">Cómo llegar</h3>
+      <div class="overflow-hidden rounded-xl border border-line h-48">
+        <iframe
+          title="Ubicación de New Style Studio"
+          src="https://maps.google.com/maps?q=Intendente%20Oliver%20285%2C%20Florencio%20Varela&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-full grayscale-[30%] contrast-125 brightness-90"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-line">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-steel font-medium">
+      <p>© 2026 New Style Studio. Todos los derechos reservados.</p>
+      <p>Barbería · Corte · Estilo · Actitud</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox para la galería -->
+<div id="lightbox" class="hidden fixed inset-0 z-[100] bg-ink/95 backdrop-blur-sm items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button id="lightboxClose" type="button" aria-label="Cerrar" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full border border-gold/40 hover:border-gold bg-charcoal flex items-center justify-center transition-colors">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </button>
+  <figure class="max-w-4xl w-full">
+    <img id="lightboxImg" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-lg border border-gold/25">
+    <figcaption id="lightboxCaption" class="text-center text-steel text-sm font-semibold mt-4"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
