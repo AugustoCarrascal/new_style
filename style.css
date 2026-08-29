@@ -47,6 +47,12 @@
     animation: poleSpin 3.5s linear infinite;
   }
 
+  .team-photo-federico {
+    transform: scale(1.04);
+    filter: saturate(1.08) contrast(1.03) brightness(1.06);
+    object-position: center top;
+  }
+
   @keyframes poleSpin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
